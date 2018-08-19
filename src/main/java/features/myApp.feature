@@ -23,23 +23,23 @@ Feature: Test face book
   @FailedLogin
   Scenario: Title of your scenario outline
     Given Open Facebook login page
-    When I enter username as "chandra"
-    When I enter password as "vimal"
+    When I enter username as "wrongUser"
+    When I enter password as "wrongPassword"
     Then Login should fail
     Then Relogin option should be available
     
   @SuccuessLogin
   Scenario: Title of your scenario outline
     Given Open Facebook login page
-    When I enter username as "richa91singh@gmail.com"
-    When I enter password as "knmodi@123"
+    When I enter username as "test@gmail.com"
+    When I enter password as "test"
     Then Login should pass
     
   @Post 
   Scenario: Title of your scenario outline
     Given Open Facebook login page
-    When I enter username as "richa91singh@gmail.com"
-    When I enter password as "knmodi@123"
+    When I enter username as "test@gmail.com"
+    When I enter password as "test"
     Then Login should pass
     Then Post a status message: "Hello friends chai pi lo"
     
